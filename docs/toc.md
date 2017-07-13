@@ -1,4 +1,4 @@
 # Table of Contents
 
 ## MVVM Design Pattern
-* [Definition](Documents/MVVM-Defined.md)
+* [Definition](Design/MVVM-Defined.md)

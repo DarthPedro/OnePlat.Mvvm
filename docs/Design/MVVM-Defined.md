@@ -6,6 +6,8 @@ Model-View-ViewModel (or MVVM) is a design pattern that facilitates the separati
 
 MVVM divides an application into three layers: 
 
+![MVVM Design Diagram](../Images/mvvm-basic.png)
+
 ### Model
 The Model represents a set of classes that describes the business logic and data. It usually involves loading data from files, database, or web services. In many applications the domain model is defined by those systems.
 

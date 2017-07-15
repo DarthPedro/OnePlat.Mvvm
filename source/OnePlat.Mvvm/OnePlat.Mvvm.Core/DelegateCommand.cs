@@ -30,15 +30,8 @@ namespace OnePlat.Mvvm.Core
     {
         #region Members
 
-        /// <summary>
-        /// The _execute
-        /// </summary>
-        private readonly Action execute;
-
-        /// <summary>
-        /// The _can execute
-        /// </summary>
-        private readonly Func<bool> canExecute;
+        private readonly Action<object> execute;
+        private readonly Predicate<object> canExecute;
         #endregion
 
         #region Constructors
@@ -49,7 +42,7 @@ namespace OnePlat.Mvvm.Core
         /// <param name="execute">The execute.</param>
         /// <param name="canExecute">The can execute.</param>
         /// <exception cref="System.ArgumentNullException">execute</exception>
-        public DelegateCommand(Action execute, Func<bool> canExecute)
+        public DelegateCommand(Action<object> execute, Predicate<object> canExecute)
         {
             this.execute = execute ?? throw new ArgumentNullException("execute");
 
@@ -65,7 +58,7 @@ namespace OnePlat.Mvvm.Core
         /// </summary>
         /// <param name="execute">The execution logic.</param>
         /// <exception cref="ArgumentNullException">If the execute argument is null.</exception>
-        public DelegateCommand(Action execute)
+        public DelegateCommand(Action<object> execute)
             : this(execute, null)
         {
         }
@@ -93,7 +86,7 @@ namespace OnePlat.Mvvm.Core
         /// <returns>true if this command can be executed; otherwise, false.</returns>
         public bool CanExecute(object parameter)
         {
-            return this.canExecute == null || this.canExecute.Invoke();
+            return this.canExecute == null || this.canExecute.Invoke(parameter);
         }
 
         /// <summary>
@@ -104,7 +97,7 @@ namespace OnePlat.Mvvm.Core
         {
             if (this.CanExecute(parameter))
             {
-                this.execute.Invoke();
+                this.execute.Invoke(parameter);
             }
         }
         #endregion

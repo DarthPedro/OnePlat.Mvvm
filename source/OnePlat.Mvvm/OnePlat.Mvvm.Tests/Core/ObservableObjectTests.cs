@@ -19,7 +19,6 @@
 //-----------------------------------------------------------------------
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OnePlat.Mvvm.Tests.Mocks;
-using System;
 using System.ComponentModel;
 
 namespace OnePlat.Mvvm.Tests.Core

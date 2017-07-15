@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnePlat.Mvvm.Core", "OnePlat.Mvvm.Core\OnePlat.Mvvm.Core.csproj", "{EE8D6601-4015-404E-8475-B456376A3B89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePlat.Mvvm.Core", "OnePlat.Mvvm.Core\OnePlat.Mvvm.Core.csproj", "{EE8D6601-4015-404E-8475-B456376A3B89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,7 +5,7 @@
 //
 // Last Modified By : DarthPedro
 // Last Modified On : 7/14/2017
-// ***********************************************************************
+//-----------------------------------------------------------------------
 // <copyright file="ObservableObject.cs" company="DarthPedro">
 //      Copyright (c) 2017 DarthPedro. All rights reserved.
 // </copyright>

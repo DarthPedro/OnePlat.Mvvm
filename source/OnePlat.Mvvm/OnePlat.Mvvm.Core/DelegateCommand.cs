@@ -4,7 +4,7 @@
 // Created          : 7/14/2017
 //
 // Last Modified By : DarthPedro
-// Last Modified On : 7/14/2017
+// Last Modified On : 7/15/2017
 //-----------------------------------------------------------------------
 // <copyright file="DelegateCommand.cs" company="DarthPedro">
 //     Copyright (c) 2017 DarthPedro. All rights reserved.
@@ -18,24 +18,17 @@
 // </summary>
 //-----------------------------------------------------------------------
 using System;
-using System.Windows.Input;
 
 namespace OnePlat.Mvvm.Core
 {
     /// <summary>
     /// Command implementation class that delegates execution method to the
     /// specified action.
+    /// This implementation is just an instance of the templated DelegateCommand
+    /// with object as its type, so it will work with untyped delegates.
     /// </summary>
-    public class DelegateCommand : ICommand
+    public class DelegateCommand : DelegateCommand<object>
     {
-        #region Members
-
-        private readonly Action<object> execute;
-        private readonly Predicate<object> canExecute;
-        #endregion
-
-        #region Constructors
-
         /// <summary>
         /// Initializes a new instance of the <see cref="DelegateCommand"/> class.
         /// </summary>
@@ -43,13 +36,8 @@ namespace OnePlat.Mvvm.Core
         /// <param name="canExecute">The can execute.</param>
         /// <exception cref="System.ArgumentNullException">execute</exception>
         public DelegateCommand(Action<object> execute, Predicate<object> canExecute)
+            : base(execute, canExecute)
         {
-            this.execute = execute ?? throw new ArgumentNullException("execute");
-
-            if (canExecute != null)
-            {
-                this.canExecute = canExecute;
-            }
         }
 
         /// <summary>
@@ -59,47 +47,8 @@ namespace OnePlat.Mvvm.Core
         /// <param name="execute">The execution logic.</param>
         /// <exception cref="ArgumentNullException">If the execute argument is null.</exception>
         public DelegateCommand(Action<object> execute)
-            : this(execute, null)
+            : base(execute)
         {
         }
-        #endregion
-
-        #region ICommand methods
-
-        /// <summary>
-        /// Occurs when changes occur that affect whether the command should execute.
-        /// </summary>
-        public event EventHandler CanExecuteChanged;
-
-        /// <summary>
-        /// Raises the can execute changed.
-        /// </summary>
-        public void RaiseCanExecuteChanged()
-        {
-            this.CanExecuteChanged?.Invoke(this, EventArgs.Empty);
-        }
-
-        /// <summary>
-        /// Defines the method that determines whether the command can execute in its current state.
-        /// </summary>
-        /// <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
-        /// <returns>true if this command can be executed; otherwise, false.</returns>
-        public bool CanExecute(object parameter)
-        {
-            return this.canExecute == null || this.canExecute.Invoke(parameter);
-        }
-
-        /// <summary>
-        /// Defines the method to be called when the command is invoked.
-        /// </summary>
-        /// <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
-        public virtual void Execute(object parameter)
-        {
-            if (this.CanExecute(parameter))
-            {
-                this.execute.Invoke(parameter);
-            }
-        }
-        #endregion
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePlat.Mvvm.Core", "OnePlat.Mvvm.Core\OnePlat.Mvvm.Core.csproj", "{EE8D6601-4015-404E-8475-B456376A3B89}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePlat.Mvvm.Tests", "OnePlat.Mvvm.Tests\OnePlat.Mvvm.Tests.csproj", "{D5956D75-9BB2-4DBD-B846-AFFEDD968FF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EE8D6601-4015-404E-8475-B456376A3B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE8D6601-4015-404E-8475-B456376A3B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE8D6601-4015-404E-8475-B456376A3B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5956D75-9BB2-4DBD-B846-AFFEDD968FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5956D75-9BB2-4DBD-B846-AFFEDD968FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5956D75-9BB2-4DBD-B846-AFFEDD968FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5956D75-9BB2-4DBD-B846-AFFEDD968FF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

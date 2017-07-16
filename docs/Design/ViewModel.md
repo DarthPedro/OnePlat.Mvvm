@@ -4,4 +4,4 @@ The view-model introduces the concept of separation between the view and the und
 
 The view-model also exposes methods, commands, and properties that help maintain the state of the view, manipulate the model as the result of commands.
 
-View-models typically expose properties used to databind with views, commands that views call in response to user input, and events that update the view in response to data changes. To update views, view-model must implement IPropertyChanged interface, to which the databinding responds.
+View-models typically expose properties used to databind with views, commands that views call in response to user input, and events that update the view in response to data changes. To update views, view-model must implement INotifyPropertyChanged interface, to which the databinding responds.

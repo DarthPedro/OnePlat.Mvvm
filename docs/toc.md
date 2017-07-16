@@ -5,3 +5,4 @@
 * [Model](Design/Model.md)
 * [View](Design/View.md)
 * [ViewModel](Design/ViewModel.md)
+* [Minimal Implemenation](Design/Minimal.md)

@@ -4,6 +4,7 @@ using ContosoUniversity.Models;
 using ContosoUniversity.Views;
 using OnePlat.Mvvm.Core;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Input;
 
 namespace ContosoUniversity.ViewModels
@@ -14,8 +15,8 @@ namespace ContosoUniversity.ViewModels
 
         public ListStudentsViewModel()
         {
-            this.context = new SchoolRepository();
-            this.Students = context.Students;
+            this.context = SchoolRepository.Current;
+            this.Students = context.Students.OrderBy(s => s.LastName).ToList();
 
             // initialize commands
             this.CreateStudentCommand = new DelegateCommand((p) => this.OnCreateStudent());

@@ -5,10 +5,19 @@ namespace ContosoUniversity.DataAccess
 {
     public class SchoolRepository
     {
-        public SchoolRepository()
+        #region Singleton pattern
+        private static readonly SchoolRepository current = new SchoolRepository();
+
+        private SchoolRepository()
         {
             DataInitializer.Initialize(this);
         }
+
+        public static SchoolRepository Current
+        {
+            get { return current; }
+        }
+        #endregion
 
         public IList<Student> Students { get; set; } = new List<Student>();
 

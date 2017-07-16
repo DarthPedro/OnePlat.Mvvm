@@ -8,4 +8,4 @@
 * [Minimal Implemenation](Design/Minimal.md)
 
 ## Tutorials
-* [Minimal MVVM Tutorial](Tutorials/Minimal.md)
+* [Tutorial 1: Minimal MVVM](Tutorials/Minimal.md)

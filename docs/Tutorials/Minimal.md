@@ -1,1 +1,1 @@
-# Minimal MVVM Tutorial
+# Tutorial 1: Minimal MVVM

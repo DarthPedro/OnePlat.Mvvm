@@ -8,6 +8,8 @@
     <RepositoryUrl>https://github.com/DarthPedro/OnePlat.Mvvm</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>MVVM Model View ViewModel</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>OnePlat is a set of libraries for building cross platform applications on .NET with C#. The OnePlat.Mvvm.Core library is for managing MVVM capabilities in a simple way.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

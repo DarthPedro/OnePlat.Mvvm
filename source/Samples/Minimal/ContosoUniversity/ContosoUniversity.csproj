@@ -191,7 +191,6 @@
       <Version>5.2.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\..\OnePlat.Mvvm\OnePlat.Mvvm.Core\OnePlat.Mvvm.Core.csproj">
       <Project>{ee8d6601-4015-404e-8475-b456376a3b89}</Project>

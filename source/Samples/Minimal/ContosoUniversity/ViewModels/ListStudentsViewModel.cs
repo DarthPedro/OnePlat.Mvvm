@@ -53,21 +53,21 @@ namespace ContosoUniversity.ViewModels
 
         private void OnDetailsStudent()
         {
-            FrameHelper.MainFrame.Navigate(typeof(DetailsStudentPage));
+            FrameHelper.MainFrame.Navigate(typeof(DetailsStudentPage), this.CurrentStudent.ID);
         }
 
         public ICommand EditStudentCommand { get; set; }
 
         private void OnEditStudent()
         {
-            FrameHelper.MainFrame.Navigate(typeof(EditStudentPage));
+            FrameHelper.MainFrame.Navigate(typeof(EditStudentPage), this.CurrentStudent.ID);
         }
 
         public ICommand DeleteStudentCommand { get; set; }
 
         private void OnDeleteStudent()
         {
-            FrameHelper.MainFrame.Navigate(typeof(DeleteStudentPage));
+            FrameHelper.MainFrame.Navigate(typeof(DeleteStudentPage), this.CurrentStudent.ID);
         }
 
         private void UpdateCommands()

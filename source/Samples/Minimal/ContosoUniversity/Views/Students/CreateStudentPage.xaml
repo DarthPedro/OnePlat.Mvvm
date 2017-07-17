@@ -26,13 +26,13 @@
         <TextBlock Grid.Row="0" Grid.ColumnSpan="4" FontSize="24" Text="Create Student" />
         <StackPanel Grid.Row="1" Grid.Column="1">
             <TextBox Header="First Name:" PlaceholderText="enter first name" Margin="0,4"
-                     Text="{x:Bind ViewModel.NewStudent.FirstMidName, Mode=TwoWay}" />
+                     Text="{x:Bind ViewModel.Student.FirstMidName, Mode=TwoWay}" />
             <TextBox Header="Last Name:" PlaceholderText="enter last name" Margin="0,4"
-                     Text="{x:Bind ViewModel.NewStudent.LastName, Mode=TwoWay}" />
+                     Text="{x:Bind ViewModel.Student.LastName, Mode=TwoWay}" />
             <CalendarDatePicker Header="Enrollment Date:" PlaceholderText="select enrollment date" Margin="0,4"
                                 Date="{x:Bind ViewModel.EnrollmentDate, Mode=TwoWay}" />
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" Orientation="Horizontal">
+        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Orientation="Horizontal">
             <Button Margin="8,0" Content="Save" Command="{x:Bind ViewModel.SaveCommand}" />
             <Button Margin="8,0" Content="Cancel" Command="{x:Bind ViewModel.CancelCommand}" />
         </StackPanel>

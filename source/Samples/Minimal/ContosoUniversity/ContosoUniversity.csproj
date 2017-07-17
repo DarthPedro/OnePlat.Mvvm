@@ -113,8 +113,12 @@
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="ViewModels\CreateStudentViewModel.cs" />
+    <Compile Include="ViewModels\DeleteStudentViewModel.cs" />
+    <Compile Include="ViewModels\DetailsStudentViewModel.cs" />
+    <Compile Include="ViewModels\EditStudentViewModel.cs" />
     <Compile Include="ViewModels\ListStudentsViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\StudentBaseViewModel.cs" />
     <Compile Include="Views\Students\DeleteStudentPage.xaml.cs">
       <DependentUpon>DeleteStudentPage.xaml</DependentUpon>
     </Compile>

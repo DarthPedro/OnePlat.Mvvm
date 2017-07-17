@@ -7,6 +7,7 @@ namespace ContosoUniversity.DataAccess
     {
         #region Singleton pattern
         private static readonly SchoolRepository current = new SchoolRepository();
+        public static int studentNextId = 200;
 
         private SchoolRepository()
         {

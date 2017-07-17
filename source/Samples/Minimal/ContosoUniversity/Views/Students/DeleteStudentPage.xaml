@@ -3,22 +3,41 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ContosoUniversity.Views"
+    xmlns:vm="using:ContosoUniversity.ViewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Margin="12">
+    <Page.DataContext>
+        <vm:DeleteStudentViewModel x:Name="ViewModel" />
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" FontSize="24" Text="Delete Student" />
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <Button Margin="8,0" Content="Delete" />
-            <Button Margin="8,0" Content="Cancel"/>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" FontSize="24" Text="Delete Student" />
+        <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="Wrap"
+                   Text="Are you sure you'd like to delete this student?" />
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <TextBlock Text="First Name:" Margin="0,4,0,0" />
+            <TextBlock Text="{x:Bind ViewModel.Student.FirstMidName}" Margin="0,0,0,4" />
+            <TextBlock Text="Last Name:" Margin="0,4,0,0" />
+            <TextBlock Text="{x:Bind ViewModel.Student.LastName}" Margin="0,0,0,4" />
+            <TextBlock Text="Enrollment Date:" Margin="0,4,0,0" />
+            <TextBlock Text="{x:Bind ViewModel.Student.EnrollmentDate}" Margin="0,0,0,4" />
         </StackPanel>
-
+        <StackPanel Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Stretch" Orientation="Horizontal">
+            <Button Margin="8,0" Content="Delete" Command="{x:Bind ViewModel.DeleteCommand}" />
+            <Button Margin="8,0" Content="Cancel" Command="{x:Bind ViewModel.CancelCommand}" />
+        </StackPanel>
     </Grid>
 </Page>

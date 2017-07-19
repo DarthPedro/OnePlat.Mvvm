@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePlat.Mvvm.Core", "OnePla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePlat.Mvvm.Tests", "OnePlat.Mvvm.Tests\OnePlat.Mvvm.Tests.csproj", "{D5956D75-9BB2-4DBD-B846-AFFEDD968FF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity", "..\Samples\Minimal\ContosoUniversity\ContosoUniversity.csproj", "{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,26 +51,6 @@ Global
 		{D5956D75-9BB2-4DBD-B846-AFFEDD968FF2}.Release|x64.Build.0 = Release|Any CPU
 		{D5956D75-9BB2-4DBD-B846-AFFEDD968FF2}.Release|x86.ActiveCfg = Release|Any CPU
 		{D5956D75-9BB2-4DBD-B846-AFFEDD968FF2}.Release|x86.Build.0 = Release|Any CPU
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|ARM.ActiveCfg = Debug|ARM
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|ARM.Build.0 = Debug|ARM
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|ARM.Deploy.0 = Debug|ARM
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|x64.ActiveCfg = Debug|x64
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|x64.Build.0 = Debug|x64
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|x64.Deploy.0 = Debug|x64
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|x86.ActiveCfg = Debug|x86
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|x86.Build.0 = Debug|x86
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Debug|x86.Deploy.0 = Debug|x86
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|Any CPU.ActiveCfg = Release|x86
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|ARM.ActiveCfg = Release|ARM
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|ARM.Build.0 = Release|ARM
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|ARM.Deploy.0 = Release|ARM
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|x64.ActiveCfg = Release|x64
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|x64.Build.0 = Release|x64
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|x64.Deploy.0 = Release|x64
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|x86.ActiveCfg = Release|x86
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|x86.Build.0 = Release|x86
-		{DCDA758E-887A-4DE9-88FB-D5B6C07AA633}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

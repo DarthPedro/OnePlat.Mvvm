@@ -12,6 +12,7 @@
     <Description>OnePlat is a set of libraries for building cross platform applications on .NET with C#. The OnePlat.Mvvm.Core library is for managing MVVM capabilities in a simple way.</Description>
     <Authors>DarthPedro</Authors>
     <Company>OnePlat</Company>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

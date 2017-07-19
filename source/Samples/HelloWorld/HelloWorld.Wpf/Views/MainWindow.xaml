@@ -3,27 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HelloWorld.Wpf"
-        xmlns:vm="clr-namespace:HelloWorld.Wpf.ViewModels"
+        xmlns:v="clr-namespace:HelloWorld.Wpf.Views"
         mc:Ignorable="d" Margin="12"
         Title="MainWindow" Height="712" Width="525">
-    <Window.DataContext>
-        <vm:MainViewModel x:Name="ViewModel" />
-    </Window.DataContext>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" FontSize="32" TextAlignment="Center"
-                   Text="{Binding Message}" />
-        <Button Grid.Row="2" FontSize="12" Margin="8,0" HorizontalAlignment="Stretch" Content="Increment Counter"
-                Command="{Binding IncrementCommand}" />
-        <StackPanel Grid.Row="3" Margin="0,8" HorizontalAlignment="Center" Orientation="Horizontal">
-            <TextBlock FontSize="12" Text="Count: " />
-            <TextBlock FontSize="12" Text="{Binding Count, Mode=OneWay}" />
-        </StackPanel>
+        <v:MainView />
     </Grid>
 </Window>

@@ -6,7 +6,7 @@
 // Last Modified By : DarthPedro
 // Last Modified On : 7/18/2017
 //-----------------------------------------------------------------------
-// <copyright file="App.xaml.cs" company="DarthPedro">
+// <copyright file="MainView.xaml.cs" company="DarthPedro">
 //      Copyright (c) 2017 DarthPedro. All rights reserved.
 // </copyright>
 // <summary>
@@ -16,15 +16,22 @@
 // libraries for developing for .NET in all its flavors and platforms.
 // This library implements a basic MVVM Framework.
 // </summary>
-//-----------------------------------------------------------------------
-using System.Windows;
+//-----------------------------------------------------------------------using System;
+using System.Windows.Controls;
 
-namespace HelloWorld.Wpf
+namespace HelloWorld.Wpf.Views
 {
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// Interaction logic for MainView.xaml
     /// </summary>
-    public partial class App : Application
+    public partial class MainView : UserControl
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainView"/> class.
+        /// </summary>
+        public MainView()
+        {
+            this.InitializeComponent();
+        }
     }
 }

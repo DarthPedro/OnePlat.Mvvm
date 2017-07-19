@@ -10,12 +10,21 @@
     <PackageTags>MVVM Model View ViewModel</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Description>OnePlat is a set of libraries for building cross platform applications on .NET with C#. The OnePlat.Mvvm.Core library is for managing MVVM capabilities in a simple way.</Description>
+    <Authors>DarthPedro</Authors>
+    <Company>OnePlat</Company>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <TreatSpecificWarningsAsErrors />
     <DocumentationFile>bin\Debug\netstandard1.4\OnePlat.Mvvm.Core.xml</DocumentationFile>
+    <NoWarn>1701;1702;1705;SA1124</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+    <DocumentationFile>bin\Release\netstandard1.4\OnePlat.Mvvm.Core.xml</DocumentationFile>
     <NoWarn>1701;1702;1705;SA1124</NoWarn>
   </PropertyGroup>
 

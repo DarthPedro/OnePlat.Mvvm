@@ -7,7 +7,7 @@ The minimal implementation needed for MVVM on the Windows platforms includes:
 * View DataContext is set to the corresponding view-model. This is how the view has a reference to its view-model
 * View-model implements INotifyPropertyChanged interface for property updates to/from the view.
 * View-model collection properties are ObservableCollections (the .NET Framework has an implementation of this).
-* View-model exposes commands (implements ICommand) that perform operatoin on its data and the model.
+* View-model exposes commands (which implement ICommand) that perform operation on its data and the model.
 
 There are frameworks with far richer implementations. Many of those begin managing the application lifecycle, navigation between pages, and the services that applications use. As you advance in your use of MVVM and build richer applications, those services really help you build testable and maintainable code. But those are actually application frameworks with MVVM as their core pattern.
 

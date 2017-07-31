@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloWorld"
+             xmlns:vm="clr-namespace:HelloWorld.ViewModels"
+             x:Class="HelloWorld.MainPage">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Row="0" FontSize="32"
+                   Text="{Binding Message}" />
+        <Button Grid.Row="2" Margin="8,0" Text="Increment Counter"
+                Command="{Binding IncrementCommand}" />
+        <StackLayout Grid.Row="3" Margin="0,8" Orientation="Horizontal">
+            <Label Text="Count: " />
+            <Label Text="{Binding Count, Mode=OneWay}" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
